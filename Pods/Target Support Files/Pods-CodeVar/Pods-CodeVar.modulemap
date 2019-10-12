@@ -1,0 +1,6 @@
+framework module Pods_CodeVar {
+  umbrella header "Pods-CodeVar-umbrella.h"
+
+  export *
+  module * { export * }
+}

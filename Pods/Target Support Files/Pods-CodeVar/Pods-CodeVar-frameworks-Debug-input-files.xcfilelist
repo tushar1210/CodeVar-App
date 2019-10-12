@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-CodeVar/Pods-CodeVar-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Canvas/Canvas.framework
+${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework
