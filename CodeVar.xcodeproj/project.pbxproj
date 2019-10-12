@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3642A0C4235217200027E373 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642A0C3235217200027E373 /* profileViewController.swift */; };
+		33F12B7A23522919009029E3 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F12B7923522919009029E3 /* NotificationViewController.swift */; };
+		33F12B7C2352293D009029E3 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F12B7B2352293D009029E3 /* NotificationTableViewCell.swift */; };
+		33F12B7F23522A91009029E3 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F12B7E23522A91009029E3 /* NotificationData.swift */; };
+		33F12B8123522D75009029E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B8023522D74009029E3 /* GoogleService-Info.plist */; };
+		33F12B8C235232B1009029E3 /* Blinker-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B83235232B1009029E3 /* Blinker-SemiBold.ttf */; };
+		33F12B8D235232B1009029E3 /* Blinker-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B84235232B1009029E3 /* Blinker-Black.ttf */; };
+		33F12B8E235232B1009029E3 /* Blinker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B85235232B1009029E3 /* Blinker-Regular.ttf */; };
+		33F12B8F235232B1009029E3 /* Blinker-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B86235232B1009029E3 /* Blinker-Light.ttf */; };
+		33F12B90235232B1009029E3 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B87235232B1009029E3 /* OFL.txt */; };
+		33F12B91235232B1009029E3 /* Blinker-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B88235232B1009029E3 /* Blinker-Bold.ttf */; };
+		33F12B92235232B1009029E3 /* Blinker-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B89235232B1009029E3 /* Blinker-ExtraBold.ttf */; };
+		33F12B93235232B1009029E3 /* Blinker-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B8A235232B1009029E3 /* Blinker-Thin.ttf */; };
+		33F12B94235232B1009029E3 /* Blinker-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */; };
+		3642A0C4235217200027E373 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642A0C3235217200027E373 /* ProfileViewController.swift */; };
 		78CA0C63234DC3F4006CBED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C62234DC3F4006CBED9 /* AppDelegate.swift */; };
 		78CA0C65234DC3F4006CBED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C64234DC3F4006CBED9 /* SceneDelegate.swift */; };
-		78CA0C67234DC3F4006CBED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C66234DC3F4006CBED9 /* ViewController.swift */; };
+		78CA0C67234DC3F4006CBED9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C66234DC3F4006CBED9 /* TimelineViewController.swift */; };
 		78CA0C6A234DC3F4006CBED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CA0C68234DC3F4006CBED9 /* Main.storyboard */; };
 		78CA0C6C234DC3F5006CBED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CA0C6B234DC3F5006CBED9 /* Assets.xcassets */; };
 		78CA0C6F234DC3F5006CBED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CA0C6D234DC3F5006CBED9 /* LaunchScreen.storyboard */; };
@@ -19,13 +32,26 @@
 
 /* Begin PBXFileReference section */
 		0ACE2CF6F4DAF95ECC7678AE /* Pods-CodeVar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeVar.debug.xcconfig"; path = "Target Support Files/Pods-CodeVar/Pods-CodeVar.debug.xcconfig"; sourceTree = "<group>"; };
-		3642A0C3235217200027E373 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		33F12B7923522919009029E3 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		33F12B7B2352293D009029E3 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		33F12B7E23522A91009029E3 /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
+		33F12B8023522D74009029E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33F12B83235232B1009029E3 /* Blinker-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-SemiBold.ttf"; sourceTree = "<group>"; };
+		33F12B84235232B1009029E3 /* Blinker-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Black.ttf"; sourceTree = "<group>"; };
+		33F12B85235232B1009029E3 /* Blinker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Regular.ttf"; sourceTree = "<group>"; };
+		33F12B86235232B1009029E3 /* Blinker-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Light.ttf"; sourceTree = "<group>"; };
+		33F12B87235232B1009029E3 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		33F12B88235232B1009029E3 /* Blinker-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Bold.ttf"; sourceTree = "<group>"; };
+		33F12B89235232B1009029E3 /* Blinker-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraBold.ttf"; sourceTree = "<group>"; };
+		33F12B8A235232B1009029E3 /* Blinker-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Thin.ttf"; sourceTree = "<group>"; };
+		33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3642A0C3235217200027E373 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		59ED8F032A8697F5F50D7815 /* Pods-CodeVar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeVar.release.xcconfig"; path = "Target Support Files/Pods-CodeVar/Pods-CodeVar.release.xcconfig"; sourceTree = "<group>"; };
 		6B299A090C25EB3E554F2C55 /* Pods_CodeVar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeVar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CA0C5F234DC3F4006CBED9 /* CodeVar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeVar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CA0C62234DC3F4006CBED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78CA0C64234DC3F4006CBED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78CA0C66234DC3F4006CBED9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78CA0C66234DC3F4006CBED9 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		78CA0C69234DC3F4006CBED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78CA0C6B234DC3F5006CBED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78CA0C6E234DC3F5006CBED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +70,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33F12B7823522845009029E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78CA0C66234DC3F4006CBED9 /* TimelineViewController.swift */,
+				3642A0C3235217200027E373 /* ProfileViewController.swift */,
+				33F12B7923522919009029E3 /* NotificationViewController.swift */,
+				33F12B7B2352293D009029E3 /* NotificationTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33F12B7D23522A7E009029E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33F12B7E23522A91009029E3 /* NotificationData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33F12B82235232B1009029E3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33F12B83235232B1009029E3 /* Blinker-SemiBold.ttf */,
+				33F12B84235232B1009029E3 /* Blinker-Black.ttf */,
+				33F12B85235232B1009029E3 /* Blinker-Regular.ttf */,
+				33F12B86235232B1009029E3 /* Blinker-Light.ttf */,
+				33F12B87235232B1009029E3 /* OFL.txt */,
+				33F12B88235232B1009029E3 /* Blinker-Bold.ttf */,
+				33F12B89235232B1009029E3 /* Blinker-ExtraBold.ttf */,
+				33F12B8A235232B1009029E3 /* Blinker-Thin.ttf */,
+				33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3869368E49BF2E65974C6593 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +120,7 @@
 				78CA0C61234DC3F4006CBED9 /* CodeVar */,
 				78CA0C60234DC3F4006CBED9 /* Products */,
 				3869368E49BF2E65974C6593 /* Pods */,
+				33F12B82235232B1009029E3 /* Fonts */,
 				A50D90B3D8427A31CDBA34E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -74,14 +136,15 @@
 		78CA0C61234DC3F4006CBED9 /* CodeVar */ = {
 			isa = PBXGroup;
 			children = (
+				33F12B7D23522A7E009029E3 /* Model */,
+				33F12B7823522845009029E3 /* Views */,
 				78CA0C62234DC3F4006CBED9 /* AppDelegate.swift */,
 				78CA0C64234DC3F4006CBED9 /* SceneDelegate.swift */,
-				78CA0C66234DC3F4006CBED9 /* ViewController.swift */,
-				3642A0C3235217200027E373 /* profileViewController.swift */,
 				78CA0C68234DC3F4006CBED9 /* Main.storyboard */,
 				78CA0C6B234DC3F5006CBED9 /* Assets.xcassets */,
 				78CA0C6D234DC3F5006CBED9 /* LaunchScreen.storyboard */,
 				78CA0C70234DC3F5006CBED9 /* Info.plist */,
+				33F12B8023522D74009029E3 /* GoogleService-Info.plist */,
 			);
 			path = CodeVar;
 			sourceTree = "<group>";
@@ -155,6 +218,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CA0C6F234DC3F5006CBED9 /* LaunchScreen.storyboard in Resources */,
+				33F12B92235232B1009029E3 /* Blinker-ExtraBold.ttf in Resources */,
+				33F12B8F235232B1009029E3 /* Blinker-Light.ttf in Resources */,
+				33F12B94235232B1009029E3 /* Blinker-ExtraLight.ttf in Resources */,
+				33F12B8E235232B1009029E3 /* Blinker-Regular.ttf in Resources */,
+				33F12B90235232B1009029E3 /* OFL.txt in Resources */,
+				33F12B8123522D75009029E3 /* GoogleService-Info.plist in Resources */,
+				33F12B91235232B1009029E3 /* Blinker-Bold.ttf in Resources */,
+				33F12B93235232B1009029E3 /* Blinker-Thin.ttf in Resources */,
+				33F12B8D235232B1009029E3 /* Blinker-Black.ttf in Resources */,
+				33F12B8C235232B1009029E3 /* Blinker-SemiBold.ttf in Resources */,
 				78CA0C6C234DC3F5006CBED9 /* Assets.xcassets in Resources */,
 				78CA0C6A234DC3F4006CBED9 /* Main.storyboard in Resources */,
 			);
@@ -209,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78CA0C67234DC3F4006CBED9 /* ViewController.swift in Sources */,
+				33F12B7C2352293D009029E3 /* NotificationTableViewCell.swift in Sources */,
+				33F12B7A23522919009029E3 /* NotificationViewController.swift in Sources */,
+				78CA0C67234DC3F4006CBED9 /* TimelineViewController.swift in Sources */,
 				78CA0C63234DC3F4006CBED9 /* AppDelegate.swift in Sources */,
-				3642A0C4235217200027E373 /* profileViewController.swift in Sources */,
+				3642A0C4235217200027E373 /* ProfileViewController.swift in Sources */,
 				78CA0C65234DC3F4006CBED9 /* SceneDelegate.swift in Sources */,
+				33F12B7F23522A91009029E3 /* NotificationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

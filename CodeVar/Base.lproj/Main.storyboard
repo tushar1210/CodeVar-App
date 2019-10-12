@@ -6,11 +6,19 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Blinker-Regular.ttf">
+            <string>Blinker-Regular</string>
+        </array>
+        <array key="Blinker-SemiBold.ttf">
+            <string>Blinker-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Timeline-->
         <scene sceneID="jNC-dd-lO1">
             <objects>
-                <viewController id="Ktd-Jr-OHL" customClass="ViewController" customModule="CodeVar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ktd-Jr-OHL" customClass="TimelineViewController" customModule="CodeVar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4N-7d-mfK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +161,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Dai-CZ-AIy">
             <objects>
-                <viewController id="f9p-vi-CYD" customClass="profileViewController" customModule="CodeVar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f9p-vi-CYD" customClass="ProfileViewController" customModule="CodeVar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vyv-gf-HTV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="2906" y="112"/>
         </scene>
-        <!--Item-->
+        <!--Consumable-->
         <scene sceneID="VeG-hY-0Ad">
             <objects>
                 <viewController id="iVI-YR-Edo" sceneMemberID="viewController">
@@ -176,13 +184,13 @@
                         <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="A13-mS-Ugt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CBW-A4-HUz"/>
+                    <tabBarItem key="tabBarItem" title="Consumable" id="CBW-A4-HUz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPz-aL-Ltj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="803"/>
         </scene>
-        <!--Item-->
+        <!--Help-->
         <scene sceneID="X04-xY-dLz">
             <objects>
                 <viewController id="kTr-EN-X96" sceneMemberID="viewController">
@@ -192,29 +200,109 @@
                         <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="YC6-ys-CyU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qUL-xA-d6W"/>
+                    <tabBarItem key="tabBarItem" title="Help" id="qUL-xA-d6W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXp-w6-gMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="1474"/>
         </scene>
-        <!--Item-->
+        <!--Notifications-->
         <scene sceneID="Ytb-Vx-Kqb">
             <objects>
-                <viewController id="CzC-kS-GfO" sceneMemberID="viewController">
+                <viewController id="CzC-kS-GfO" customClass="NotificationViewController" customModule="CodeVar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SjX-bU-xiy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aAe-Jl-kEe">
+                                <rect key="frame" x="0.0" y="135" width="375" height="594"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="96" id="qmM-fS-xDg" customClass="NotificationTableViewCell" customModule="CodeVar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmM-fS-xDg" id="dfC-lb-YVV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpg-h8-WuJ">
+                                                    <rect key="frame" x="32" y="16" width="279" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Amu-IG-oWR"/>
+                                                        <constraint firstAttribute="width" constant="279" id="zXk-ho-XbB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="16"/>
+                                                    <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jra-Jo-pSc">
+                                                    <rect key="frame" x="32" y="39" width="26.666666666666671" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="S2T-40-bU5"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="26" id="Vej-i0-yG5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="12"/>
+                                                    <color key="textColor" red="0.45490196078431372" green="0.50980392156862742" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jpg-h8-WuJ" firstAttribute="leading" secondItem="dfC-lb-YVV" secondAttribute="leading" constant="32" id="HQ8-XF-DWT"/>
+                                                <constraint firstItem="Jpg-h8-WuJ" firstAttribute="top" secondItem="dfC-lb-YVV" secondAttribute="top" constant="16" id="LrL-C1-I7q"/>
+                                                <constraint firstItem="Jra-Jo-pSc" firstAttribute="top" secondItem="Jpg-h8-WuJ" secondAttribute="bottom" constant="3" id="ZXU-QP-qL5"/>
+                                                <constraint firstItem="Jra-Jo-pSc" firstAttribute="leading" secondItem="dfC-lb-YVV" secondAttribute="leading" constant="32" id="vRe-rs-TlA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="Jpg-h8-WuJ" id="EEU-Lk-DgF"/>
+                                            <outlet property="timeLabel" destination="Jra-Jo-pSc" id="fcL-Ka-d1S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG1-gb-K0q">
+                                <rect key="frame" x="32" y="68" width="195" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Aj2-x4-UFt"/>
+                                    <constraint firstAttribute="width" constant="195" id="sAu-2e-ed8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="36"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ankit" translatesAutoresizingMaskIntoConstraints="NO" id="6mO-hS-xPg">
+                                <rect key="frame" x="311" y="74" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="0zm-mn-KjN"/>
+                                    <constraint firstAttribute="height" constant="32" id="q5Y-vE-1ZG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qCM-jw-Ocx" firstAttribute="trailing" secondItem="aAe-Jl-kEe" secondAttribute="trailing" id="0oZ-Jg-HgB"/>
+                            <constraint firstItem="6mO-hS-xPg" firstAttribute="centerY" secondItem="RG1-gb-K0q" secondAttribute="centerY" id="CeY-q8-trU"/>
+                            <constraint firstItem="qCM-jw-Ocx" firstAttribute="bottom" secondItem="aAe-Jl-kEe" secondAttribute="bottom" id="KQe-Ri-U6J"/>
+                            <constraint firstItem="aAe-Jl-kEe" firstAttribute="leading" secondItem="qCM-jw-Ocx" secondAttribute="leading" id="cqg-J2-y92"/>
+                            <constraint firstItem="qCM-jw-Ocx" firstAttribute="trailing" secondItem="6mO-hS-xPg" secondAttribute="trailing" constant="32" id="g1m-5H-SID"/>
+                            <constraint firstItem="aAe-Jl-kEe" firstAttribute="top" secondItem="RG1-gb-K0q" secondAttribute="bottom" constant="23" id="mne-ml-0lY"/>
+                            <constraint firstItem="RG1-gb-K0q" firstAttribute="top" secondItem="SjX-bU-xiy" secondAttribute="top" constant="68" id="nfA-R0-Tld"/>
+                            <constraint firstItem="RG1-gb-K0q" firstAttribute="leading" secondItem="qCM-jw-Ocx" secondAttribute="leading" constant="32" id="ybu-ip-bqH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qCM-jw-Ocx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ZRp-cU-EzW"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="ZRp-cU-EzW"/>
+                    <connections>
+                        <outlet property="imageView" destination="6mO-hS-xPg" id="cye-sm-N5N"/>
+                        <outlet property="label" destination="RG1-gb-K0q" id="WqE-wU-CtL"/>
+                        <outlet property="tableView" destination="aAe-Jl-kEe" id="LZS-Hu-svU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hH9-JX-JbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="2176"/>
+            <point key="canvasLocation" x="1080.8" y="2175.3694581280788"/>
         </scene>
-        <!--Item-->
+        <!--About Us-->
         <scene sceneID="KxU-E1-fDN">
             <objects>
                 <viewController id="CY9-2p-j2c" sceneMemberID="viewController">
@@ -224,7 +312,7 @@
                         <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Mqx-hQ-T0r"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2TS-C3-KAB"/>
+                    <tabBarItem key="tabBarItem" title="About Us" id="2TS-C3-KAB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TG-kW-Syi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

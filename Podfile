@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '9.0'
 
 target 'CodeVar' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,5 +8,6 @@ target 'CodeVar' do
   # Pods for CodeVar
     pod "MBCircularProgressBar"
     pod "Canvas"
+    pod 'Firebase/Database'
 
 end
