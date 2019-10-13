@@ -21,6 +21,7 @@
 		33F12B93235232B1009029E3 /* Blinker-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B8A235232B1009029E3 /* Blinker-Thin.ttf */; };
 		33F12B94235232B1009029E3 /* Blinker-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */; };
 		3642A0C4235217200027E373 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642A0C3235217200027E373 /* ProfileViewController.swift */; };
+		36EF9187235390F500CD2419 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EF9186235390F500CD2419 /* LoginViewController.swift */; };
 		78CA0C63234DC3F4006CBED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C62234DC3F4006CBED9 /* AppDelegate.swift */; };
 		78CA0C65234DC3F4006CBED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C64234DC3F4006CBED9 /* SceneDelegate.swift */; };
 		78CA0C67234DC3F4006CBED9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C66234DC3F4006CBED9 /* TimelineViewController.swift */; };
@@ -46,6 +47,7 @@
 		33F12B8A235232B1009029E3 /* Blinker-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Thin.ttf"; sourceTree = "<group>"; };
 		33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraLight.ttf"; sourceTree = "<group>"; };
 		3642A0C3235217200027E373 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		36EF9186235390F500CD2419 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		59ED8F032A8697F5F50D7815 /* Pods-CodeVar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeVar.release.xcconfig"; path = "Target Support Files/Pods-CodeVar/Pods-CodeVar.release.xcconfig"; sourceTree = "<group>"; };
 		6B299A090C25EB3E554F2C55 /* Pods_CodeVar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeVar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CA0C5F234DC3F4006CBED9 /* CodeVar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeVar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		33F12B7823522845009029E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36EF9186235390F500CD2419 /* LoginViewController.swift */,
 				78CA0C66234DC3F4006CBED9 /* TimelineViewController.swift */,
 				3642A0C3235217200027E373 /* ProfileViewController.swift */,
 				33F12B7923522919009029E3 /* NotificationViewController.swift */,
@@ -286,6 +289,7 @@
 				33F12B7A23522919009029E3 /* NotificationViewController.swift in Sources */,
 				78CA0C67234DC3F4006CBED9 /* TimelineViewController.swift in Sources */,
 				78CA0C63234DC3F4006CBED9 /* AppDelegate.swift in Sources */,
+				36EF9187235390F500CD2419 /* LoginViewController.swift in Sources */,
 				3642A0C4235217200027E373 /* ProfileViewController.swift in Sources */,
 				78CA0C65234DC3F4006CBED9 /* SceneDelegate.swift in Sources */,
 				33F12B7F23522A91009029E3 /* NotificationData.swift in Sources */,
@@ -434,13 +438,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SDDB7WX63J;
+				DEVELOPMENT_TEAM = F58MNCFC2N;
 				INFOPLIST_FILE = CodeVar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tushar.CodeVar;
+				PRODUCT_BUNDLE_IDENTIFIER = akay.CodeVar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,13 +458,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SDDB7WX63J;
+				DEVELOPMENT_TEAM = F58MNCFC2N;
 				INFOPLIST_FILE = CodeVar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tushar.CodeVar;
+				PRODUCT_BUNDLE_IDENTIFIER = akay.CodeVar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

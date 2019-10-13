@@ -18,11 +18,13 @@ PODS:
     - GoogleUtilities/Environment
   - leveldb-library (1.20)
   - MBCircularProgressBar (0.3.5)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Canvas
   - Firebase/Database
   - MBCircularProgressBar
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,6 +36,7 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - MBCircularProgressBar
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
@@ -44,7 +47,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 57962826d5920e740b4e852e493e4b9beb62dd4c
+PODFILE CHECKSUM: 6494a2b0facb449f46eb669f67d10198142c1b55
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.7.5

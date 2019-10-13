@@ -9,5 +9,6 @@ target 'CodeVar' do
     pod "MBCircularProgressBar"
     pod "Canvas"
     pod 'Firebase/Database'
+    pod 'TextFieldEffects'
 
 end

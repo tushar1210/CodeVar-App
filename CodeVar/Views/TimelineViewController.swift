@@ -10,6 +10,8 @@ import UIKit
 import Canvas
 import MBCircularProgressBar
 
+//MARK:- DATE AND TIME variables defined globally.
+
 let date = Date()
 let calander = Calendar.current
 let hour = calander.component(.hour, from: date)
@@ -20,6 +22,7 @@ let month = calander.component(.month, from: date)
 let eventTime = "\(hour):\(minute)"
 let eventDate = "\(day):\(month)"
 
+//MARK:-
 
 class TimelineViewController: UIViewController {
     
@@ -40,12 +43,13 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileBttn.layer.cornerRadius = 13
+        updateLabels()
+        profileBttn.layer.cornerRadius = 8
         profileBttn.clipsToBounds = true
         self.progressView.value = 0
         self.progressView.maxValue = CGFloat(MAXTIME)
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.isNavigationBarHidden = true
     }
@@ -56,9 +60,36 @@ class TimelineViewController: UIViewController {
         }
     }
     
+    //MARK:- code below is to update the progress Bar in the scene according to the time
+    
     @objc func updateProgress(){
         
-        if eventTime >= "\(8):\(00)" && eventTime <= "\(12):\(00)"  && eventDate == "\(12):\(10)" {
+        if eventTime >= "\(8):\(00)" && eventTime <= "\(12):\(00)"  && eventDate == "\(13):\(10)" {            //self.roundsCollectionView.scrollToItem(at: IndexPath(item: 01, section: 1), at: .centeredVertically, animated: true)
+            self.progressView.value = 15
+            self.progressView.progressColor = UIColor(red:0.95, green:0.15, blue:0.07, alpha:1.0)
+            self.progressView.progressStrokeColor = UIColor(red:0.95, green:0.15, blue:0.07, alpha:1.0)
+        }
+        if eventTime >= "\(12):\(01)" && eventTime <= "\(15):\(00)"  && eventDate == "\(13):\(10)" {
+            self.progressView.value = 30
+            self.progressView.progressColor = UIColor(red:0.43, green:0.84, blue:0.93, alpha:1.0)
+            self.progressView.progressStrokeColor = UIColor(red:0.43, green:0.84, blue:0.93, alpha:1.0)
+        }
+        if eventTime >= "\(15):\(01)" && eventTime <= "\(18):\(00)"  && eventDate == "\(13):\(10)" {
+            self.progressView.value = 50
+        }
+        if eventTime >= "\(18):\(01)" && eventTime <= "\(22):\(00)"  && eventDate == "\(13):\(10)" {
+            self.progressView.value = 80
+        }
+        if eventTime >= "\(22):\(01)" && eventTime <= "\(7):\(00)"  && eventDate == "\(13):\(10)" {
+            self.progressView.value = 100
+        }
+    }
+    
+    //MARK:- code below is to update the labels in the scene according to the time
+
+    @objc func updateLabels(){
+        
+        if eventTime >= "\(8):\(00)" && eventTime <= "\(12):\(00)"  && eventDate == "\(13):\(10)" {
             currentLabel.text = "Snacks"
             next1Label.text = "Snacks"
             next2Label.text = "Round1"
@@ -66,12 +97,8 @@ class TimelineViewController: UIViewController {
             time1Label.text = "07:00 AM"
             time2Label.text = "07:00 AM"
             time3Label.text = "07:00 AM"
-            //self.roundsCollectionView.scrollToItem(at: IndexPath(item: 01, section: 1), at: .centeredVertically, animated: true)
-            self.progressView.value = 15
-            self.progressView.progressColor = UIColor(red:0.95, green:0.15, blue:0.07, alpha:1.0)
-            self.progressView.progressStrokeColor = UIColor(red:0.95, green:0.15, blue:0.07, alpha:1.0)
         }
-        if eventTime >= "\(12):\(01)" && eventTime <= "\(15):\(00)"  && eventDate == "\(12):\(10)" {
+        if eventTime >= "\(12):\(01)" && eventTime <= "\(15):\(00)"  && eventDate == "\(13):\(10)" {
             currentLabel.text = "Round 1"
             next1Label.text = "Round 2"
             next2Label.text = "Round 3"
@@ -79,11 +106,8 @@ class TimelineViewController: UIViewController {
             time1Label.text = "07:00 AM"
             time2Label.text = "07:00 AM"
             time3Label.text = "07:00 AM"
-            self.progressView.value = 30
-            self.progressView.progressColor = UIColor(red:0.43, green:0.84, blue:0.93, alpha:1.0)
-            self.progressView.progressStrokeColor = UIColor(red:0.43, green:0.84, blue:0.93, alpha:1.0)
         }
-        if eventTime >= "\(15):\(01)" && eventTime <= "\(18):\(00)"  && eventDate == "\(12):\(10)" {
+        if eventTime >= "\(15):\(01)" && eventTime <= "\(18):\(00)"  && eventDate == "\(13):\(10)" {
             currentLabel.text = "Round 2"
             next1Label.text = "Round 2"
             next2Label.text = "Round 3"
@@ -91,9 +115,9 @@ class TimelineViewController: UIViewController {
             time1Label.text = "07:00 AM"
             time2Label.text = "07:00 AM"
             time3Label.text = "07:00 AM"
-            self.progressView.value = 50
+            
         }
-        if eventTime >= "\(18):\(01)" && eventTime <= "\(22):\(00)"  && eventDate == "\(12):\(10)" {
+        if eventTime >= "\(18):\(01)" && eventTime <= "\(22):\(00)"  && eventDate == "\(13):\(10)" {
             currentLabel.text = "Round 3"
             next1Label.text = "Round 3"
             next2Label.text = "Round 4"
@@ -101,9 +125,9 @@ class TimelineViewController: UIViewController {
             time1Label.text = "07:00 AM"
             time2Label.text = "07:00 AM"
             time3Label.text = "07:00 AM"
-            self.progressView.value = 80
+            
         }
-        if eventTime >= "\(22):\(01)" && eventTime <= "\(7):\(00)"  && eventDate == "\(12):\(10)" {
+        if eventTime >= "\(22):\(01)" && eventTime <= "\(7):\(00)"  && eventDate == "\(13):\(10)" {
             currentLabel.text = "Round 4"
             next1Label.text = "Round 4"
             next2Label.text = "Round 5"
@@ -111,10 +135,8 @@ class TimelineViewController: UIViewController {
             time1Label.text = "07:00 AM"
             time2Label.text = "07:00 AM"
             time3Label.text = "07:00 AM"
-            self.progressView.value = 100
         }
     }
-
 
 }
 
