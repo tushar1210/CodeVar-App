@@ -11,12 +11,14 @@ import FirebaseDatabase
 
 class NotificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    //MARK: - Variables
+    var notificationArray = [NotificationData]()
+    var ref:DatabaseReference!
+    
+    //MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
-    var notificationArray = [NotificationData]()
-    var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,10 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         ref = Database.database().reference()
         retrieveNotifications()
     }
-    
+    //MARK: - Set View
     func setView() {
         tableView.rowHeight = 70.0
     }
-    
-    
     // MARK: - TableView Datasource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notificationArray.count
@@ -46,8 +46,6 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         return cell
         
     }
-    
-    
     // MARK: - Retrieve Notifications
     func retrieveNotifications() {
         
@@ -74,15 +72,4 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
                    
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
