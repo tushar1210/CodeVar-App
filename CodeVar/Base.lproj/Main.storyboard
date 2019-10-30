@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3rJ-19-f0D">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -223,6 +224,7 @@
                         <outlet property="time1Label" destination="2mz-5l-q07" id="aQF-6o-4nS"/>
                         <outlet property="time2Label" destination="Vda-R5-Wor" id="32i-hj-qzY"/>
                         <outlet property="time3Label" destination="d7n-4D-Ns9" id="pgj-x6-cgh"/>
+                        <outlet property="timerLabel" destination="YET-3j-8al" id="SNP-Io-k4c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="af4-1q-o3P" sceneMemberID="firstResponder"/>
@@ -637,32 +639,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snm-UU-OBe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snm-UU-OBe">
                                 <rect key="frame" x="91" y="175" width="193" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="DiJ-9O-RPi"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="QIs-N3-bQP"/>
-                                    <constraint firstAttribute="height" constant="49" id="cq6-jA-NW3"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="36"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeVar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-eu-ve3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CodeVar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-eu-ve3">
                                 <rect key="frame" x="91" y="214" width="193" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="9Vo-Lk-Hwh"/>
-                                    <constraint firstAttribute="height" constant="49" id="aBS-eK-50P"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="36"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-oD-s5h" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-oD-s5h" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="32" y="347" width="311" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="ly8-tb-Arz"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -681,11 +674,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="su3-5j-ALF" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="su3-5j-ALF" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="33" y="419" width="310" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="JYJ-rt-UeB"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -704,12 +695,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf5-oG-USp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf5-oG-USp">
                                 <rect key="frame" x="32" y="491" width="310" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76078431372549016" green="0.55686274509803924" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="I0l-o2-EGw"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="16"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -720,32 +709,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Snm-UU-OBe" firstAttribute="trailing" secondItem="bgS-eu-ve3" secondAttribute="trailing" id="0Mo-To-Ceo"/>
-                            <constraint firstItem="Snm-UU-OBe" firstAttribute="leading" secondItem="bgS-eu-ve3" secondAttribute="leading" id="0g1-Zb-3rL"/>
-                            <constraint firstItem="Snm-UU-OBe" firstAttribute="top" secondItem="Lgu-jz-1Hc" secondAttribute="top" constant="131" id="0n7-2O-oiR"/>
-                            <constraint firstItem="bgS-eu-ve3" firstAttribute="centerX" secondItem="1bb-oD-s5h" secondAttribute="centerX" id="3xd-Pl-bzX"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="trailing" secondItem="tf5-oG-USp" secondAttribute="trailing" id="4U7-Wz-FTg"/>
-                            <constraint firstItem="bgS-eu-ve3" firstAttribute="top" secondItem="Lgu-jz-1Hc" secondAttribute="top" constant="170" id="4rN-Hj-RNy"/>
-                            <constraint firstItem="bgS-eu-ve3" firstAttribute="centerX" secondItem="su3-5j-ALF" secondAttribute="centerX" id="9qn-ne-68g"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="centerX" secondItem="k5b-1g-X4g" secondAttribute="centerX" id="Bt7-dc-eZw"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="top" secondItem="bgS-eu-ve3" secondAttribute="bottom" constant="84" id="D39-7X-Y5Z"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="leading" secondItem="Lgu-jz-1Hc" secondAttribute="leading" constant="32" id="GQl-7q-1cx"/>
-                            <constraint firstItem="su3-5j-ALF" firstAttribute="top" secondItem="1bb-oD-s5h" secondAttribute="bottom" constant="24" id="H43-bl-oaV"/>
-                            <constraint firstItem="Lgu-jz-1Hc" firstAttribute="trailing" secondItem="bgS-eu-ve3" secondAttribute="trailing" constant="91" id="KYO-0H-3Mt"/>
-                            <constraint firstItem="su3-5j-ALF" firstAttribute="leading" secondItem="Lgu-jz-1Hc" secondAttribute="leading" constant="33" id="NcP-Rb-cRq"/>
-                            <constraint firstItem="bgS-eu-ve3" firstAttribute="leading" secondItem="Lgu-jz-1Hc" secondAttribute="leading" constant="91" id="Vd8-fn-LOX"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="leading" secondItem="tf5-oG-USp" secondAttribute="leading" id="WZ3-xS-j8v"/>
-                            <constraint firstItem="bgS-eu-ve3" firstAttribute="top" secondItem="Lgu-jz-1Hc" secondAttribute="top" constant="170" id="Wf7-4i-QC0"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="top" secondItem="bgS-eu-ve3" secondAttribute="bottom" constant="84" id="dmo-TI-pDa"/>
-                            <constraint firstItem="Snm-UU-OBe" firstAttribute="leading" secondItem="Lgu-jz-1Hc" secondAttribute="leading" constant="91" id="eaQ-RR-MHz"/>
-                            <constraint firstItem="Lgu-jz-1Hc" firstAttribute="bottom" secondItem="tf5-oG-USp" secondAttribute="bottom" constant="239" id="f10-Xz-CCB"/>
-                            <constraint firstItem="tf5-oG-USp" firstAttribute="top" secondItem="su3-5j-ALF" secondAttribute="bottom" constant="24" id="h1K-1G-hZL"/>
-                            <constraint firstItem="Snm-UU-OBe" firstAttribute="top" secondItem="Lgu-jz-1Hc" secondAttribute="top" constant="131" id="jHd-R0-ca7"/>
-                            <constraint firstItem="1bb-oD-s5h" firstAttribute="top" secondItem="Snm-UU-OBe" secondAttribute="bottom" constant="123" id="uH0-mL-FHU"/>
-                            <constraint firstItem="Lgu-jz-1Hc" firstAttribute="trailing" secondItem="Snm-UU-OBe" secondAttribute="trailing" constant="91" id="vOt-KB-KtK"/>
-                            <constraint firstItem="Snm-UU-OBe" firstAttribute="leading" secondItem="Lgu-jz-1Hc" secondAttribute="leading" constant="91" id="ziG-TZ-0r5"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lgu-jz-1Hc"/>
                     </view>
                     <connections>
@@ -805,7 +768,6 @@
         <!--Help-->
         <scene sceneID="GPS-nJ-tD8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dfu-gY-lT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKn-NH-Gb1" customClass="HelpNavigationController" customModule="CodeVar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Help" image="help-icon" id="qUL-xA-d6W"/>
                     <toolbarItems/>
@@ -818,6 +780,7 @@
                         <segue destination="kTr-EN-X96" kind="relationship" relationship="rootViewController" id="ILE-3u-qrE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfu-gY-lT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080.8" y="1473.3990147783252"/>
         </scene>
