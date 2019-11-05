@@ -23,7 +23,7 @@ class HelpDetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setView()
-    }
+   }
     //MARK: - Set View
     func setView() {
             submitButton.layer.cornerRadius = 10.0
@@ -41,18 +41,35 @@ class HelpDetailViewController: UIViewController {
                 titleLabel.text = "Other"
                 break
             default:
-                titleLabel.text = ""
+                titleLabel.text = "Error"
                 break
             }
     }
     //MARK: - Submit Pressed
     @IBAction func submitTapped(_ sender: UIButton) {
+        //UI setup
+        helpTextField.endEditing(true)
+        helpTextField.isEnabled = false
+        submitButton.isEnabled = false
+          
         //write to Database
+        let helpDB = Database.database().reference().child(titleLabel.text!)
+        let helpDictionary = ["Sender": "test", "Message" : helpTextField.text!]
+        helpDB.childByAutoId().setValue(helpDictionary) {
+            (error, reference) in
+            if error != nil {
+                print(error)
+            }
+            else{
+                print("Message saved Successfully!")
+            }
+            self.helpTextField.isEnabled = true
+            self.submitButton.isEnabled = true
+            self.helpTextField.text = ""
+        }
     }
-
-    
-    
-
-    
-
+    //MARK: - Hide the Keyboard when tapped anyehere else
+       override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?) {
+           self.view.endEditing(true)
+       }
 }

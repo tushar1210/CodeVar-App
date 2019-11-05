@@ -13,8 +13,6 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
     
     //MARK: - Variables
     var notificationArray = [NotificationData]()
-    var ref:DatabaseReference!
-    
     //MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
@@ -26,7 +24,6 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         setView()
-        ref = Database.database().reference()
         retrieveNotifications()
     }
     //MARK: - Set View
@@ -44,12 +41,11 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         cell.timeLabel.text = notificationArray[indexPath.row].time
         cell.backgroundColor = UIColor.clear
         return cell
-        
     }
     // MARK: - Retrieve Notifications
     func retrieveNotifications() {
         
-        let notifDB = ref.child("Notifications")
+        let notifDB = Database.database().reference().child("Notifications")
                
         notifDB.observe(.childAdded) { (snapshot) in
                    
@@ -69,7 +65,6 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
             self.notificationArray.append(notification)
                    
             self.tableView.reloadData()
-                   
         }
     }
 }
