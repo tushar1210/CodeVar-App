@@ -10,5 +10,8 @@ target 'CodeVar' do
     pod "Canvas"
     pod 'Firebase/Database'
     pod 'TextFieldEffects'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'SDWebImage'
 
 end

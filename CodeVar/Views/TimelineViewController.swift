@@ -9,6 +9,7 @@
 import UIKit
 import Canvas
 import MBCircularProgressBar
+import SDWebImage
 
 //MARK:- DATE AND TIME variables defined globally.
 
@@ -40,6 +41,7 @@ let pm8 = "\(20):\(00)" // 08PM
 
 class TimelineViewController: UIViewController {
     
+    var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
     let MAXTIME : Float = 100.0
     var currentTime : Float = 0.0
     
@@ -70,6 +72,7 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         timerstart()
         //updateLabels()
         updateLabels()

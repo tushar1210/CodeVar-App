@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HelpView: UIViewController {
 
     //MARK: - Variables
     var buttonNumber : Int = 0
+    var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
     }
     //MARK: - IBAction for Buttons
     @IBAction func consumablesTapped(_ sender: UIButton) {
