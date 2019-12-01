@@ -8,11 +8,14 @@
 
 import UIKit
 import FirebaseDatabase
+import SDWebImage
 
 class HelpDetailViewController: UIViewController {
 
     //MARK: - Variables
     internal var buttonNumberPressed : Int = 0
+    var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
+    var username = UserDefaults.standard.string(forKey: "username") ?? ""
     //MARK: - Outlets
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,6 +25,7 @@ class HelpDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        profileImageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         setView()
    }
     //MARK: - Set View
@@ -54,7 +58,7 @@ class HelpDetailViewController: UIViewController {
           
         //write to Database
         let helpDB = Database.database().reference().child(titleLabel.text!)
-        let helpDictionary = ["Sender": "test", "Message" : helpTextField.text!]
+        let helpDictionary = ["Sender": username, "Message" : helpTextField.text!]
         helpDB.childByAutoId().setValue(helpDictionary) {
             (error, reference) in
             if error != nil {

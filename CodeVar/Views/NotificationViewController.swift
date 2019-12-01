@@ -8,11 +8,13 @@
 
 import UIKit
 import FirebaseDatabase
+import SDWebImage
 
 class NotificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     //MARK: - Variables
     var notificationArray = [NotificationData]()
+    var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
     //MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
@@ -21,6 +23,7 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         tableView.delegate = self
         tableView.dataSource = self
         setView()

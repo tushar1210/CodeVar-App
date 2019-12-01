@@ -11,7 +11,8 @@ import UIKit
 class ConsumableView: UIViewController {
 
     //MARK: - Variables
-    private var username : String!
+    var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
+    var username = UserDefaults.standard.string(forKey: "username") ?? ""
     private var qrcodeImage: CIImage!
     //MARK: - IBoutlets
     @IBOutlet weak var profileImageView: UIImageView!
@@ -20,7 +21,7 @@ class ConsumableView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        username = "CodeVar"
+        profileImageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         qrImageView.image = generateQRCode(from: username)
         setView()
     }
