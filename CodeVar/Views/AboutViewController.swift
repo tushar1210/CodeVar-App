@@ -13,7 +13,6 @@ import SDWebImage
 
 class AboutViewController: UIViewController {
 
-    var url = "https://api.codepark.in/compete/events/details/codevar"
     var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
     var aboutUs = """
     CodeVar is a national level Code-A-Thon which is planned to be conducted in three phases as below
@@ -96,57 +95,11 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         eventTextView.isEditable = false
+        eventTextView.isScrollEnabled = false
         eventTextView.text = aboutUs
         imageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
-//        Networking()
           
      }
-    
-//    func Networking() {
-//        Alamofire.request(url, method: .get).responseJSON {
-//
-//                response in
-//                if response.result.isSuccess {
-//
-//                    print("success! got data")
-//
-//                    let eventJSON : JSON = JSON(response.result.value!)
-//                    print(eventJSON)
-//
-//                    self.eventLabel.text = "About " +  eventJSON["event"]["name"].stringValue
-//                    self.eventTextView.attributedText = eventJSON["event"]["description"].description.html2Attributed
-//
-//                }
-//                else
-//                {
-//
-//                    print("Error \(response.result.error)")
-//                }
-//            }
-//    }
-    
-
-    
-
-    
-    
 }
 
-//extension String {
-//    var html2Attributed: NSAttributedString? {
-//        do {
-//            guard let data = data(using: String.Encoding.utf8) else {
-//                return nil
-//            }
-//            return try NSAttributedString(data: data,
-//                                          options: [.documentType: NSAttributedString.DocumentType.html,
-//                                                    .characterEncoding: String.Encoding.utf8.rawValue],
-//                                          documentAttributes: nil)
-//        } catch {
-//            print("error: ", error)
-//            return nil
-//        }
-//    }
-//}

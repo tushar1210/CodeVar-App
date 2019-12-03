@@ -12,7 +12,8 @@ class ConsumableView: UIViewController {
 
     //MARK: - Variables
     var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
-    var username = UserDefaults.standard.string(forKey: "username") ?? ""
+    var email = UserDefaults.standard.string(forKey: "email") ?? ""
+    var qrString : String!
     private var qrcodeImage: CIImage!
     //MARK: - IBoutlets
     @IBOutlet weak var profileImageView: UIImageView!
@@ -22,7 +23,8 @@ class ConsumableView: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         profileImageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
-        qrImageView.image = generateQRCode(from: username)
+        qrString = email.replacingOccurrences(of: ".", with: "_")
+        qrImageView.image = generateQRCode(from: qrString)
         setView()
     }
     //MARK: - Set View
