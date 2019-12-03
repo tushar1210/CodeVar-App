@@ -15,7 +15,9 @@ class HelpDetailViewController: UIViewController {
     //MARK: - Variables
     internal var buttonNumberPressed : Int = 0
     var profileImage = UserDefaults.standard.string(forKey: "profileImage") ?? ""
-    var username = UserDefaults.standard.string(forKey: "username") ?? ""
+    var email = UserDefaults.standard.string(forKey: "email") ?? ""
+    var newEmail : String!
+    var sendToChild : String!
     //MARK: - Outlets
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,6 +28,7 @@ class HelpDetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         profileImageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
+        newEmail = email.replacingOccurrences(of: ".", with: "_")
         setView()
    }
     //MARK: - Set View
@@ -34,15 +37,19 @@ class HelpDetailViewController: UIViewController {
             switch buttonNumberPressed {
             case 1:
                 titleLabel.text = "Consumables team"
+                sendToChild = "ConsumableTeam"
                 break
             case 2:
                 titleLabel.text = "CodePark related"
+                sendToChild = "CodeparkRelated"
                 break
             case 3:
                 titleLabel.text = "Venue issues"
+                sendToChild = "VenueIssues"
                 break
             case 4:
                 titleLabel.text = "Other"
+                sendToChild = "Others"
                 break
             default:
                 titleLabel.text = "Error"
@@ -57,8 +64,8 @@ class HelpDetailViewController: UIViewController {
         submitButton.isEnabled = false
           
         //write to Database
-        let helpDB = Database.database().reference().child(titleLabel.text!)
-        let helpDictionary = ["Sender": username, "Message" : helpTextField.text!]
+        let helpDB = Database.database().reference().child(sendToChild)
+        let helpDictionary = ["Sender": newEmail, "Message" : helpTextField.text!]
         helpDB.childByAutoId().setValue(helpDictionary) {
             (error, reference) in
             if error != nil {
@@ -66,12 +73,21 @@ class HelpDetailViewController: UIViewController {
             }
             else{
                 print("Message saved Successfully!")
+                self.showAlert()
             }
             self.helpTextField.isEnabled = true
             self.submitButton.isEnabled = true
             self.helpTextField.text = ""
         }
     }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "", message: "Message saved Successfully!", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     //MARK: - Hide the Keyboard when tapped anyehere else
        override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?) {
            self.view.endEditing(true)

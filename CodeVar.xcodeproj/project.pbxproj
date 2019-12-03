@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3305BE8B2392975B0001E984 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305BE8A2392975B0001E984 /* AboutViewController.swift */; };
+		331244B623969E8200EFB841 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331244B523969E8200EFB841 /* CustomNavigationController.swift */; };
 		331648F623641C7700039D57 /* ConsumableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331648F523641C7700039D57 /* ConsumableView.swift */; };
-		3378D42B2392CBB00049AB85 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378D42A2392CBB00049AB85 /* userData.swift */; };
 		33F12B7A23522919009029E3 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F12B7923522919009029E3 /* NotificationViewController.swift */; };
 		33F12B7C2352293D009029E3 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F12B7B2352293D009029E3 /* NotificationTableViewCell.swift */; };
 		33F12B7F23522A91009029E3 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F12B7E23522A91009029E3 /* NotificationData.swift */; };
@@ -25,7 +25,6 @@
 		33F12B94235232B1009029E3 /* Blinker-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */; };
 		33F542D62364571F0048ECBD /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F542D52364571F0048ECBD /* HelpView.swift */; };
 		33F542D823647C820048ECBD /* HelpDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F542D723647C820048ECBD /* HelpDetailViewController.swift */; };
-		33F542DA2364B6640048ECBD /* HelpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F542D92364B6640048ECBD /* HelpNavigationController.swift */; };
 		3642A0C4235217200027E373 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642A0C3235217200027E373 /* ProfileViewController.swift */; };
 		36EF9187235390F500CD2419 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EF9186235390F500CD2419 /* LoginViewController.swift */; };
 		78CA0C63234DC3F4006CBED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA0C62234DC3F4006CBED9 /* AppDelegate.swift */; };
@@ -40,8 +39,8 @@
 /* Begin PBXFileReference section */
 		0ACE2CF6F4DAF95ECC7678AE /* Pods-CodeVar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeVar.debug.xcconfig"; path = "Target Support Files/Pods-CodeVar/Pods-CodeVar.debug.xcconfig"; sourceTree = "<group>"; };
 		3305BE8A2392975B0001E984 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		331244B523969E8200EFB841 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		331648F523641C7700039D57 /* ConsumableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumableView.swift; sourceTree = "<group>"; };
-		3378D42A2392CBB00049AB85 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		33F12B7923522919009029E3 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		33F12B7B2352293D009029E3 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		33F12B7E23522A91009029E3 /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 		33F12B8B235232B1009029E3 /* Blinker-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraLight.ttf"; sourceTree = "<group>"; };
 		33F542D52364571F0048ECBD /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		33F542D723647C820048ECBD /* HelpDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailViewController.swift; sourceTree = "<group>"; };
-		33F542D92364B6640048ECBD /* HelpNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNavigationController.swift; sourceTree = "<group>"; };
 		3642A0C3235217200027E373 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		36EF9186235390F500CD2419 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		59ED8F032A8697F5F50D7815 /* Pods-CodeVar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeVar.release.xcconfig"; path = "Target Support Files/Pods-CodeVar/Pods-CodeVar.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +93,8 @@
 				331648F523641C7700039D57 /* ConsumableView.swift */,
 				33F542D52364571F0048ECBD /* HelpView.swift */,
 				33F542D723647C820048ECBD /* HelpDetailViewController.swift */,
-				33F542D92364B6640048ECBD /* HelpNavigationController.swift */,
 				3305BE8A2392975B0001E984 /* AboutViewController.swift */,
+				331244B523969E8200EFB841 /* CustomNavigationController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				33F12B7E23522A91009029E3 /* NotificationData.swift */,
-				3378D42A2392CBB00049AB85 /* userData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,8 +306,7 @@
 				78CA0C67234DC3F4006CBED9 /* TimelineViewController.swift in Sources */,
 				33F542D62364571F0048ECBD /* HelpView.swift in Sources */,
 				78CA0C63234DC3F4006CBED9 /* AppDelegate.swift in Sources */,
-				33F542DA2364B6640048ECBD /* HelpNavigationController.swift in Sources */,
-				3378D42B2392CBB00049AB85 /* userData.swift in Sources */,
+				331244B623969E8200EFB841 /* CustomNavigationController.swift in Sources */,
 				36EF9187235390F500CD2419 /* LoginViewController.swift in Sources */,
 				3642A0C4235217200027E373 /* ProfileViewController.swift in Sources */,
 				3305BE8B2392975B0001E984 /* AboutViewController.swift in Sources */,

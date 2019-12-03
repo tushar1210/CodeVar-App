@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBttn: UIButton!
     
     var url = "https://api.codepark.in/auth/verifyUser"
-    let userDataModel = userData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,7 @@ class LoginViewController: UIViewController {
     func hideKeyboard(){
         passwordField.resignFirstResponder()
     }
+    
     @objc func keyboardwilchange(notification: Notification){
         print("Keyboard will show: \(notification.name.rawValue)")
         view.frame.origin.y = -270
@@ -52,21 +52,18 @@ class LoginViewController: UIViewController {
         hideKeyboard()
         return true
     }
+    
     //Hide when touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         view.frame.origin.y = 0
     }
     
-    // MARK:-
-    
-    
+    // MARK:- Login
     @IBAction func LoginTapped(_ sender: UIButton) {
-        
         let params : [String : String] = ["email" : emailField.text! ,"password" : passwordField.text!]
+        UserDefaults.standard.set(emailField.text, forKey: "email")
         VerifyUser(url: url, parameters: params)
-        
-        
     }
     
     func VerifyUser(url: String, parameters : [String : String]) {
@@ -99,22 +96,23 @@ class LoginViewController: UIViewController {
             print(message)
             emailField.text = ""
             passwordField.text = ""
+            authAlert(message: message)
         }
     }
     
+    func authAlert(message : String)
+    {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func updateUserData(json : JSON) {
-        
-        userDataModel.firstName = json["userData"]["name"]["firstName"].stringValue
-        userDataModel.lastName  = json["userData"]["name"]["lastName"].stringValue
-        userDataModel.fullName  = json["userData"]["name"]["fullName"].stringValue
-        userDataModel.username = json["userData"]["username"].stringValue
-        userDataModel.uid = json["userData"]["uid"].stringValue
-        userDataModel.profileImage = json["userData"]["profile_image"].stringValue
-        
-        UserDefaults.standard.set(userDataModel.profileImage , forKey: "profileImage")
-        UserDefaults.standard.set(userDataModel.username , forKey: "username")
-        UserDefaults.standard.set(userDataModel.fullName , forKey: "fullName")
-        
+        UserDefaults.standard.set(json["userData"]["profile_image"].stringValue, forKey: "profileImage")
+        UserDefaults.standard.set(json["userData"]["username"].stringValue, forKey: "username")
+        UserDefaults.standard.set(json["userData"]["name"]["fullName"].stringValue, forKey: "fullName")
+        UserDefaults.standard.set(json["cookies"]["CP"].stringValue, forKey: "cookie")
     }
     
     
