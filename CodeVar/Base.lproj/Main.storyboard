@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35j-5g-gfN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35j-5g-gfN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -216,15 +216,18 @@
                     <navigationItem key="navigationItem" id="JMr-PM-Wmv"/>
                     <connections>
                         <outlet property="currentLabel" destination="gF3-1V-cxB" id="DJd-bL-UiD"/>
+                        <outlet property="currenteventLabel" destination="PpX-dx-oEq" id="Y1f-ho-Euj"/>
                         <outlet property="next1Label" destination="xft-Ds-8Cl" id="x8a-yt-o6U"/>
                         <outlet property="next2Label" destination="3UY-hK-KYw" id="H8r-kG-wJe"/>
                         <outlet property="next3Label" destination="z7I-EH-OGP" id="vFn-gL-Wo7"/>
                         <outlet property="profileBttn" destination="dfn-8c-5rI" id="ERn-H0-2hu"/>
                         <outlet property="progressView" destination="E2E-Kh-KtV" id="I1k-2m-Amf"/>
+                        <outlet property="roundendsinLabel" destination="PQd-QQ-loS" id="0W3-PH-5gW"/>
                         <outlet property="time1Label" destination="2mz-5l-q07" id="aQF-6o-4nS"/>
                         <outlet property="time2Label" destination="Vda-R5-Wor" id="32i-hj-qzY"/>
                         <outlet property="time3Label" destination="d7n-4D-Ns9" id="pgj-x6-cgh"/>
                         <outlet property="timerLabel" destination="YET-3j-8al" id="SNP-Io-k4c"/>
+                        <outlet property="upnextLabel" destination="yhY-rQ-oTw" id="9CE-Zi-u36"/>
                         <segue destination="3rJ-19-f0D" kind="show" identifier="goBack" id="Lft-WF-BFF"/>
                     </connections>
                 </viewController>
@@ -385,7 +388,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consumables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDm-Xn-2j5">
-                                <rect key="frame" x="32" y="125" width="201" height="44"/>
+                                <rect key="frame" x="32" y="81" width="201" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dlQ-lb-gwU"/>
                                     <constraint firstAttribute="width" constant="201" id="rJO-Xf-W8q"/>
@@ -395,14 +398,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ankit" translatesAutoresizingMaskIntoConstraints="NO" id="cJh-Cl-mHs">
-                                <rect key="frame" x="350" y="131" width="32" height="32"/>
+                                <rect key="frame" x="350" y="87" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="aF2-dx-rSw"/>
                                     <constraint firstAttribute="width" constant="32" id="gdE-ij-99K"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show this at the consumables desk to get your food and goodies" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-rm-jTi">
-                                <rect key="frame" x="32" y="201" width="311" height="39"/>
+                                <rect key="frame" x="32" y="157" width="311" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Mfo-xS-8OI"/>
                                     <constraint firstAttribute="width" constant="311" id="qMR-lh-2ul"/>
@@ -658,7 +661,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aAe-Jl-kEe">
-                                <rect key="frame" x="0.0" y="135" width="414" height="629"/>
+                                <rect key="frame" x="0.0" y="135" width="414" height="678"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="96" id="qmM-fS-xDg" customClass="NotificationTableViewCell" customModule="CodeVar" customModuleProvider="target">
