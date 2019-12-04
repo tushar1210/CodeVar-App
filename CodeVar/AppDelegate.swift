@@ -19,31 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        //check if already logged in
-        if UserDefaults.standard.object(forKey: "username") != nil {
-            //logged in
-            self.GoToMain()
-            
-        } else {
-            //not logged in
-            self.GoToLogin()
-           
-        }
+        Thread.sleep(forTimeInterval: 1.5)
+       //check if already logged in
         
+        
+       
         return true
     }
     
-    func GoToMain(){
-        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
-
-        self.window?.rootViewController = mainView
-    }
     
-    func GoToLogin(){
-        let loginView =   UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        
-        self.window?.rootViewController = loginView
-    }
 
 
 }

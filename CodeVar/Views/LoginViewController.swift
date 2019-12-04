@@ -19,8 +19,11 @@ class LoginViewController: UIViewController {
     
     var url = "https://api.codepark.in/auth/verifyUser"
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loginBttn.layer.cornerRadius = 10
         //Hide Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -113,6 +116,7 @@ class LoginViewController: UIViewController {
         UserDefaults.standard.set(json["userData"]["username"].stringValue, forKey: "username")
         UserDefaults.standard.set(json["userData"]["name"]["fullName"].stringValue, forKey: "fullName")
         UserDefaults.standard.set(json["cookies"]["CP"].stringValue, forKey: "cookie")
+        UserDefaults.standard.set(true, forKey: "isLogin")
     }
     
     

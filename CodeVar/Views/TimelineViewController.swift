@@ -72,12 +72,16 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        if(!UserDefaults.standard.bool(forKey: "isLogin")){
+            self.tabBarController!.tabBar.isHidden = true
+            performSegue(withIdentifier: "goBack", sender: nil)
+        }
         timerstart()
         //updateLabels()
         updateLabels()
         profileBttn.layer.cornerRadius = 8
         profileBttn.clipsToBounds = true
+        profileBttn.imageView?.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         self.progressView.value = 0
         self.progressView.maxValue = CGFloat(MAXTIME)
     }

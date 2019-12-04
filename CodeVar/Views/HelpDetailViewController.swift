@@ -82,7 +82,7 @@ class HelpDetailViewController: UIViewController {
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "", message: "Message saved Successfully!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "", message: "Message sent Successfully!", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(alertAction)
         present(alert, animated: true, completion: nil)
