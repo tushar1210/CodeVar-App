@@ -82,6 +82,7 @@ class LoginViewController: UIViewController {
             }
              else
              {
+                 self.networkAlert()
                  print("Error \(response.result.error)")
              }
          }
@@ -117,6 +118,13 @@ class LoginViewController: UIViewController {
         UserDefaults.standard.set(json["userData"]["name"]["fullName"].stringValue, forKey: "fullName")
         UserDefaults.standard.set(json["cookies"]["CP"].stringValue, forKey: "cookie")
         UserDefaults.standard.set(true, forKey: "isLogin")
+    }
+    
+    func networkAlert() {
+        let alert = UIAlertController(title: "No Internet", message: "Please check your Internet Connection and try again!", preferredStyle: .alert)
+               let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+               alert.addAction(alertAction)
+               present(alert, animated: true, completion: nil)
     }
     
     

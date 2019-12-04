@@ -53,7 +53,7 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         
         let notifDB = Database.database().reference().child("Notifications")
                
-        notifDB.observe(.value) { (snapshot) in
+        notifDB.observe(.childAdded) { (snapshot) in
                    
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             let notification = NotificationData()
