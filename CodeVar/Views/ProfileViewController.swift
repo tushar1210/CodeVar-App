@@ -31,6 +31,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         token = "Bearer "+cookie
         let headers = [
             "Authorization": "Bearer "+cookie

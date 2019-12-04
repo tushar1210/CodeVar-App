@@ -20,8 +20,10 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
+       
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         imageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         tableView.delegate = self
@@ -39,6 +41,7 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("123: ",notificationArray)
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NotificationTableViewCell
         cell.messageLabel.text = notificationArray[indexPath.row].message
         cell.timeLabel.text = notificationArray[indexPath.row].time
@@ -50,7 +53,7 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         
         let notifDB = Database.database().reference().child("Notifications")
                
-        notifDB.observe(.childAdded) { (snapshot) in
+        notifDB.observe(.value) { (snapshot) in
                    
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             let notification = NotificationData()
