@@ -16,30 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if UserDefaults.standard.bool(forKey: "isLogin") {
-
-            print("fine")
-            } else {
-
-                self.GoToLogin()
-            }
-            
-           FirebaseApp.configure()
+          FirebaseApp.configure()
             return true
         }
         
-        func GoToMain(){
-            print("12345678")
-            
-        }
-        
-        func GoToLogin(){
-            print("pgfbn")
-            
-            let loginView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            
-            self.window?.rootViewController = loginView
-        }
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

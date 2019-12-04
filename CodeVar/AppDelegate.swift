@@ -20,15 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         Thread.sleep(forTimeInterval: 1.5)
-       //check if already logged in
         
-        
-       
         return true
     }
     
-    
-
-
 }
 
