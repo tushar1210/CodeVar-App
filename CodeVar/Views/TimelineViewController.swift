@@ -42,7 +42,7 @@ func currentDeviceTime() -> String {
   return "\(hour):\(minute)"
 }
 
-//MARK:-
+
 
 class TimelineViewController: UIViewController {
     
@@ -50,11 +50,46 @@ class TimelineViewController: UIViewController {
     let MAXTIME : Float = 100.0
     var currentTime : Float = 0.0
     
-    var timer = Timer()
-    let timeInterval:TimeInterval = 1.0
+    var timer : Timer?
+    var timeInterval:TimeInterval = 1.0
     let timerEnd:TimeInterval = 0.0
     var timeCount:TimeInterval = 7200.0 // seconds or 2 hours
-    
+    func gettimecount()
+    {
+        if eventTime >= pm7 && eventTime < pm9  && eventDate == day1 {  // 7pm to 9pm
+            var timeCount:TimeInterval = 7200.0
+        }
+        else if eventTime >= pm9 && eventTime < pm1159 && eventDate == day1 {  // 9pm to 12am
+            var timeCount:TimeInterval = 10800.0
+        }
+        else if eventTime >= am12 && eventTime < am2  && eventDate == day2 {  // 12am to 2am
+            var timeCount:TimeInterval = 7200.0
+        }
+        else if eventTime >= am2 && eventTime < am6 && eventDate == day2 {  // 2am to 6am
+            var timeCount:TimeInterval = 14400.0
+        }
+        else if eventTime >= am6 && eventTime < am9 && eventDate == day2 {  // 6am to 9am
+            var timeCount:TimeInterval = 10800.0
+        }
+         /////////////
+        else if eventTime >= am9 && eventTime < am10  && eventDate == day2 {  // 9am to 10am
+            var timeCount:TimeInterval = 3600.0
+        }
+         
+         
+        else if eventTime >= am10 && eventTime < pm1  && eventDate == day2 {  // 10am to 1pm
+            var timeCount:TimeInterval = 10800.0
+        }
+        else if eventTime >= pm1 && eventTime < pm3  && eventDate == day2 { // 1pm to 3pm
+            var timeCount:TimeInterval = 7200.0
+        }
+        else if eventTime >= pm3 && eventTime < pm6 && eventDate == day2 { // 3pm to 6pm
+            var timeCount:TimeInterval = 10800.0
+        }
+        else if eventTime >= pm7 && eventTime < pm8 && eventDate == day2 { // 7pm to 8pm
+            var timeCount:TimeInterval = 3600.0
+        }
+    }
     func timerstart(){
         guard timer == nil else { return }
         
@@ -64,6 +99,11 @@ class TimelineViewController: UIViewController {
         selector: #selector(TimelineViewController.action),
         userInfo: nil,
         repeats: true)
+    }
+    func timerstop(){
+       // var timer : Timer?
+        timer?.invalidate()
+        timer = nil
     }
     @objc func action()
     {
@@ -128,9 +168,11 @@ class TimelineViewController: UIViewController {
    @objc func updateProgress(){
             if eventDate < day1 {
                 self.progressView.value = 0
+                timerstop()
             }
             if eventDate <= day1 && eventTime < pm7 {
                 self.progressView.value = 0
+                timerstop()
            }
            
            else if eventTime >= pm7 && eventTime < pm9  && eventDate == day1 { // 7pm to 9pm
