@@ -29,8 +29,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var intelligenceLabel: UILabel!
     @IBOutlet weak var activenessLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.isNavigationBarHidden = false
+       
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         
         token = "Bearer "+cookie
         let headers = [
@@ -39,16 +47,8 @@ class ProfileViewController: UIViewController {
         getData(headers : headers)
         setView()
         
-        
     }
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-    }
-    
-    
-    
+
     func setView() {
         profileImageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         usernameLabel.text = username

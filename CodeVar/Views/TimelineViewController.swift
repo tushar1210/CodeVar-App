@@ -91,15 +91,16 @@ class TimelineViewController: UIViewController {
     @IBOutlet weak var currenteventLabel: UILabel!
     @IBOutlet weak var roundendsinLabel: UILabel!
     @IBOutlet weak var upnextLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(!UserDefaults.standard.bool(forKey: "isLogin")){
-            self.tabBarController!.tabBar.isHidden = true
-            performSegue(withIdentifier: "goBack", sender: nil)
-        }
+     
         timerstart()
         updateLabels()
+        profileImageView.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
         profileBttn.layer.cornerRadius = 8
         profileBttn.clipsToBounds = true
         profileBttn.imageView?.sd_setImage(with: URL(string: profileImage ), placeholderImage: UIImage(named: "ankit"))
@@ -109,6 +110,11 @@ class TimelineViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.isNavigationBarHidden = true
+        if(!UserDefaults.standard.bool(forKey: "isLogin")){
+                 self.tabBarController!.tabBar.isHidden = true
+                 performSegue(withIdentifier: "goBack", sender: nil)
+             }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -196,6 +202,7 @@ class TimelineViewController: UIViewController {
                 upnextLabel.text = "The event will start soon."
                 roundendsinLabel.text = ""
                 currenteventLabel.text = ""
+                timerLabel.text = ""
             }
             if eventDate <= day1 && eventTime < pm7 {
                 currentLabel.text = "Welcome"
