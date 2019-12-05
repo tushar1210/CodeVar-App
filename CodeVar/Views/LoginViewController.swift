@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     
     @objc func keyboardwilchange(notification: Notification){
         print("Keyboard will show: \(notification.name.rawValue)")
-        view.frame.origin.y = -270
+        view.frame.origin.y = -210
     }
     
     //UITextFieldDeligate Methods
